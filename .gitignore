@@ -1,0 +1,23 @@
+# Unity Project Specific
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.pidb
+*.sln*
+*.unityproj
+*.asset
+*.apk
+*.unitypackage
+*.prefab.meta

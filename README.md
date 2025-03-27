@@ -1,20 +1,19 @@
 # 🏆 Mini Sumo Ball Game  
 A physics-based sumo brawl where the last ball standing wins!  
 
-This Unity project is a fun, dynamic, and progressively challenging mini sumo ball game, where players (or AI-controlled balls) compete to push each other out of an arena. The game revolves around game mechanics, a single power-up, and increasing difficulty, making it a great playground for experimenting with physics-based interactions and engaging gameplay elements.  
+This Unity Project was part of the Unity programmer pathway as I was introduced to new concepts in Game programming by adding new Game mechanics like difficulty increasing and powerups
 
 ## 🎮 Gameplay Mechanics  
-- **Physics-Driven Battles** – The sumo balls are controlled using physics forces, creating organic and unpredictable movements as they collide and fight for dominance.  
+- **Physics-Driven Battles** – The sumo balls are controlled using physics forces also the Camera,creating a challenging way of controlling the ball, and unpredictable movements as it collides and fight for dominance.  
 - **Knockback System** – Each impact applies force to opponents, making positioning and momentum control crucial for survival.  
 - **Arena Boundaries** – Players must strategize to avoid falling off while pushing others to the edge.  
 
 ## 🔥 Power-Up  
 - **Knockback Amplifier** – Boosts the force applied when colliding with opponents, leading to stronger hits.  
+- **Fire balls** – This powerUp mechanic will be added in the future as am working on refining and refactoring several game projects i have been working on .  
 
 ## 📈 Increasing Difficulty & Progression  
-- **Adaptive AI** – Enemy balls become more aggressive and skilled over time.  
-- **Dynamic Arena Hazards** – As the game progresses, obstacles such as shrinking platforms or moving barriers add extra challenges.  
-- **Wave-Based Difficulty Scaling** – The number and strength of enemies increase with each round, ensuring a progressively harder experience.  
+- **Wave-Based Difficulty Scaling** – The number of enemies increase with each wave, ensuring a progressively harder experience.  
 
 ## 🛠️ Learning & Development Goals  
 This project was built as a game mechanics practice ground, focusing on:  
@@ -26,4 +25,4 @@ This project was built as a game mechanics practice ground, focusing on:
 ## 🚀 Future Enhancements  
 - 🔹 Multiplayer mode for local or online play.  
 - 🔹 More diverse arenas with environmental effects.  
-- 🔹 Leaderboards and scoring system.  
+- 🔹 More powerups and Enemy types.  

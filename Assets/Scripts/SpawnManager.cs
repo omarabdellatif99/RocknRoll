@@ -9,12 +9,11 @@ public class SpawnManager : MonoBehaviour
     public GameObject powerUpPrefab;
     private float spawnRange = 9.0f;
     public int enemyCount;
+    private Game_Manager manager;
     public int waveNumber = 1;
     void Start()
     {
-        spawnEnemyWave(waveNumber);
-        Instantiate(powerUpPrefab, GenerateSpawnPosition(), powerUpPrefab.transform.rotation);
-
+        manager = GetComponent<Game_Manager>();
     }
 
     // Update is called once per frame
@@ -29,14 +28,14 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    void spawnEnemyWave(int enemiesToSpawn)
+    public void spawnEnemyWave(int enemiesToSpawn)
     {
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
     }
-    private Vector3 GenerateSpawnPosition()
+    public Vector3 GenerateSpawnPosition()
     {
         float spawnPosX = Random.Range(-spawnRange, spawnRange);
         float spawnPosZ = Random.Range(-spawnRange, spawnRange);

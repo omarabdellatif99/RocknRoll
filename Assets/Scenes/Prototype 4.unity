@@ -615,7 +615,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 583233602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1370683114}
+        m_TargetAssemblyTypeName: Game_Manager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &583233602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,9 +1027,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ef929ee17457649b00cfa9bc3bc44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startButton: {fileID: 0}
-  spawnManager: {fileID: 0}
-  isGameActive: 1
+  startButton: {fileID: 583233601}
+  spawnManager: {fileID: 1445724072}
+  isGameActive: 0
 --- !u!4 &1370683115
 Transform:
   m_ObjectHideFlags: 0

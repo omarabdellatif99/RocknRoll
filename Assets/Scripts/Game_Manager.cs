@@ -8,7 +8,7 @@ public class Game_Manager : MonoBehaviour
     // Start is called before the first frame update
     public Button startButton; 
     public SpawnManager spawnManager;
-    public bool isGameActive = true;
+    public bool isGameActive = false;
     void Start()
     {
         startButton = GameObject.Find("startButton").GetComponent<Button>();
@@ -22,6 +22,7 @@ public class Game_Manager : MonoBehaviour
     }
     public void StartGame()
     {
+
         isGameActive = true;
         spawnManager.spawnEnemyWave(spawnManager.waveNumber);  
         Instantiate(spawnManager.powerUpPrefab, spawnManager.GenerateSpawnPosition(), spawnManager.powerUpPrefab.transform.rotation);

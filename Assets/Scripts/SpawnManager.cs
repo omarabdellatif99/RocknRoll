@@ -9,18 +9,27 @@ public class SpawnManager : MonoBehaviour
     public GameObject powerUpPrefab;
     private float spawnRange = 9.0f;
     public int enemyCount;
-    private Game_Manager manager;
+    public Game_Manager manager;
     public int waveNumber = 1;
     void Start()
     {
-        manager = GetComponent<Game_Manager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-           
+        if(manager.isGameActive == true) { 
+        enemyCount = FindObjectsOfType<Enemy>().Length;
+
+            if (enemyCount == 0)
+            {
+                waveNumber++;
+                spawnEnemyWave(waveNumber);
+                Instantiate(powerUpPrefab, GenerateSpawnPosition(), powerUpPrefab.transform.rotation);
+            }
         }
+    }
     
 
     public void spawnEnemyWave(int enemiesToSpawn)

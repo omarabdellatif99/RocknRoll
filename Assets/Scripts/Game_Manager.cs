@@ -9,10 +9,12 @@ public class Game_Manager : MonoBehaviour
     public Button startButton; 
     public SpawnManager spawnManager;
     public bool isGameActive = false;
+    public GameObject myUI;
     void Start()
     {
         startButton = GameObject.Find("startButton").GetComponent<Button>();
         spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
+        startButton.onClick.AddListener(StartGame);
     }
 
     // Update is called once per frame
@@ -22,8 +24,8 @@ public class Game_Manager : MonoBehaviour
     }
     public void StartGame()
     {
-
         isGameActive = true;
+        myUI.SetActive(false);
         spawnManager.spawnEnemyWave(spawnManager.waveNumber);  
         Instantiate(spawnManager.powerUpPrefab, spawnManager.GenerateSpawnPosition(), spawnManager.powerUpPrefab.transform.rotation);
     }

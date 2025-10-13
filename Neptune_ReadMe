@@ -1,0 +1,11 @@
+*Version*
+using 2022.3.24f Unity version
+
+*Workflow*
+Unity -> Python Server -> Unity
+
+*Instructions*
+You look for server.py inside the RocknRoll folder run it with you IDE am using PyCharm. then the server will be running locally.
+you jump into unity and run the game start playing around to get used to the game mechanics.
+after the first wave you will start seeing the output of the model appearing on the top left side of your screen showing {Speed} and {Conf}
+

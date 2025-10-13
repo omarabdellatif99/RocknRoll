@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float powerUpStrenght = 15.0f;
     private Rigidbody playerRb;
     private GameObject focalPoint;
+    public GameObject powerupIndicator;
+
+    private float powerUpStrenght = 15.0f;
     public float speed = 5.0f;
     public bool hasPowerup = false;
-    public GameObject powerupIndicator;
     public bool isGrounded = true;
     public Vector3 jump = new Vector3(0,100,0);
     public float jumpForce = 1000.0f;
@@ -62,12 +63,14 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    
     IEnumerator PowerupCounterdownRoutine()
     {
         yield return new WaitForSeconds(5);
         hasPowerup = false;
         powerupIndicator.gameObject.SetActive(false);
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && hasPowerup) 
@@ -77,6 +80,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collided with" + collision.gameObject.name+"with powerup set to" + hasPowerup);
             enemyRb.AddForce(awayForce * powerUpStrenght, ForceMode.Impulse);
         }
+        //Under development for double jump with a smash
         if (collision.gameObject.CompareTag("Island"))
         {
             jumpCount = 0;

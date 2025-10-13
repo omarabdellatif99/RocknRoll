@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class Game_Manager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Button startButton; 
-    public SpawnManager spawnManager;
-    public bool isGameActive = false;
+    public Button startButton;
     public GameObject myUI;
+    public SpawnManager spawnManager;
+
+    public bool isGameActive = false;
+
     void Start()
     {
         startButton = GameObject.Find("startButton").GetComponent<Button>();
